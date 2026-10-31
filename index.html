@@ -3,11 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Discover Your Ayurvedic Dosha</title>
-<meta name="description" content="Explore the Ayurvedic Vata, Pitta and Kapha doshas with a guided self-discovery questionnaire. Learn about your personal mind-body tendencies.">
-<meta property="og:title" content="Discover Your Ayurvedic Dosha">
-<meta property="og:description" content="A thoughtful introduction to Vata, Pitta and Kapha, and a simple questionnaire to explore your Ayurvedic profile.">
+<title>Quizuai – Self-Discovery Quizzes</title>
+<meta name="description" content="Quizuai is a growing collection of thoughtful quizzes for self-discovery. Start with the Ayurvedic dosha questionnaire and explore your Vata, Pitta and Kapha tendencies.">
+<meta property="og:title" content="Quizuai – Self-Discovery Quizzes">
+<meta property="og:description" content="A growing collection of thoughtful quizzes for self-discovery. Start with the Ayurvedic dosha questionnaire.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://quizuai.online/">
+<link rel="canonical" href="https://quizuai.online/">
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#f6f1e7">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❋</text></svg>">
@@ -31,56 +33,68 @@ p{margin:0 0 1em}
 .btn:hover,.btn:focus-visible{background:var(--accent);outline:none}
 .note{color:var(--muted);font-size:.92rem;font-family:system-ui,sans-serif}
 .link{color:var(--accent)}
-.doshas{display:grid;gap:14px;margin-top:22px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
 .card small{display:block;color:var(--muted);font-family:system-ui,sans-serif;font-size:.85rem}
-.steps{display:grid;gap:14px;margin-top:18px;padding:0;list-style:none;counter-reset:s}
-.steps li{counter-increment:s;padding-left:46px;position:relative}
-.steps li::before{content:counter(s);position:absolute;left:0;top:2px;width:32px;height:32px;border:1px solid var(--accent);border-radius:50%;display:grid;place-items:center;color:var(--accent);font-family:system-ui,sans-serif;font-size:.9rem}
-.steps b{display:block}
-.cta{text-align:center;padding:64px 0 40px}
-footer{padding-top:24px;padding-bottom:48px;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;font-family:system-ui,sans-serif}
-@media (min-width:640px){.doshas{grid-template-columns:repeat(3,1fr)}}
+
+/* Vitrine de quizzes */
+.quizzes{display:grid;gap:16px;margin-top:22px}
+.quiz{display:flex;flex-direction:column;align-items:flex-start}
+.quiz p{color:var(--muted)}
+.quiz .btn{margin-top:auto}
+.quiz.soon{border-style:dashed;background:transparent}
+.quiz.soon h3,.quiz.soon p{color:var(--muted)}
+
+/* Sobre o quiz de dosha */
+.doshas{display:grid;gap:14px;margin-top:22px}
+.about-note{margin-top:22px}
+
+footer{margin-top:56px;padding-top:24px;padding-bottom:48px;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;font-family:system-ui,sans-serif}
+@media (min-width:640px){.doshas{grid-template-columns:repeat(3,1fr)}.quizzes{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
 <main>
   <section class="hero">
-    <p class="eyebrow">❋ Ayurveda · Self Discovery</p>
-    <h1>Discover your Ayurvedic <em>dosha.</em></h1>
-    <p class="lead">Get to know the traditional Ayurvedic concepts of Vata, Pitta and Kapha, and explore the mind-body tendencies that may resonate with you through a guided self-discovery questionnaire.</p>
-    <a class="btn" href="https://tally.so/r/PRdBX0">Take the questionnaire</a>
-    <p class="note">English questionnaire · US$4.99</p>
-    <p><a class="link" href="#the-doshas">Explore the doshas</a></p>
+    <p class="eyebrow">❋ Quizuai</p>
+    <h1>Quizzes to get to know <em>yourself.</em></h1>
+    <p class="lead">A growing collection of thoughtful questionnaires for self-discovery and reflection. Pick one below and take it at your own pace.</p>
+    <p><a class="link" href="#quizzes">See the quizzes</a></p>
   </section>
 
-  <section id="the-doshas">
-    <h2>Three doshas. One unique you.</h2>
+  <section id="quizzes">
+    <h2>Available quizzes</h2>
+    <div class="quizzes">
+
+      <!-- ===== INÍCIO DO CARTÃO DE QUIZ (copie este bloco para cada novo quiz) ===== -->
+      <div class="card quiz">
+        <small>Ayurveda · English · US$4.99</small>
+        <h3>Discover your Ayurvedic dosha</h3>
+        <p>Explore the traditional Vata, Pitta and Kapha frameworks and find the mind-body tendencies that resonate with you.</p>
+        <a class="btn" href="https://tally.so/r/PRdBX0">Take the quiz</a>
+      </div>
+      <!-- ===== FIM DO CARTÃO DE QUIZ ===== -->
+
+      <!-- Cartão de espaço reservado: apague quando houver outro quiz pronto -->
+      <div class="card quiz soon">
+        <small>Coming soon</small>
+        <h3>New quiz on the way</h3>
+        <p>We are working on the next questionnaire. Check back soon.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="dosha">
+    <h2>About the dosha quiz</h2>
     <p class="lead">In Ayurveda, the doshas are traditional frameworks for describing patterns in the body and mind. Many people relate to a blend rather than just one.</p>
     <div class="doshas">
       <div class="card"><small>Air · Space</small><h3>Vata</h3><p>Often associated with movement, creativity, curiosity and change.</p></div>
       <div class="card"><small>Fire · Water</small><h3>Pitta</h3><p>Often associated with transformation, focus, drive and intensity.</p></div>
       <div class="card"><small>Earth · Water</small><h3>Kapha</h3><p>Often associated with steadiness, patience, support and grounding.</p></div>
     </div>
-  </section>
-
-  <section>
-    <h2>A simple way to begin exploring Ayurveda.</h2>
-    <p class="lead">Use the questionnaire as a starting point for reflection and curiosity, not as a medical diagnosis or a substitute for individual professional advice.</p>
-    <ol class="steps">
-      <li><b>Answer thoughtfully</b>Choose the responses that best reflect your usual tendencies.</li>
-      <li><b>Explore your profile</b>Receive a result based on your answers and the questionnaire's dosha framework.</li>
-      <li><b>Keep learning</b>Use what you discover as a prompt to learn more about traditional Ayurvedic ideas.</li>
-    </ol>
-  </section>
-
-  <section class="cta">
-    <h2>Curious about your dosha?</h2>
-    <p class="lead">Take the English questionnaire and begin exploring your Ayurvedic profile.</p>
-    <a class="btn" href="https://tally.so/r/PRdBX0">Discover your dosha</a>
-    <p class="note">The questionnaire opens on Tally. Price shown there is US$4.99.</p>
+    <p class="note about-note">Use the questionnaire as a starting point for reflection and curiosity, not as a medical diagnosis or a substitute for individual professional advice. It opens on Tally, where the price is shown.</p>
   </section>
 </main>
-<footer>© 2026 Ayurveda · Self Discovery. Traditional wellness concepts for educational self-reflection.</footer>
+<footer>© 2026 Quizuai. Quizzes for educational self-reflection.</footer>
 </body>
 </html>
