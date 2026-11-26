@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,107 +11,118 @@
 <meta property="og:url" content="https://quizuai.online/">
 <link rel="canonical" href="https://quizuai.online/">
 <meta name="robots" content="index,follow">
-<meta name="theme-color" content="#f6f1e7">
+<meta name="theme-color" content="#f5eddb">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❋</text></svg>">
 <style>
-:root{--bg:#f6f1e7;--ink:#2b2a26;--muted:#6b665b;--accent:#8a5a2b;--card:#fbf8f1;--line:#ddd3bf}
-@media (prefers-color-scheme:dark){:root{--bg:#1f1d19;--ink:#f1ebdd;--muted:#b3ab9a;--accent:#d9a766;--card:#272521;--line:#3a362f}}
+:root{--bg:#f5eddb;--paper:#fbf6e9;--ink:#1e3028;--muted:#6c6a58;--gold:#b58a43;--line:#dfc99e;--green:#20382d}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.65;font-size:18px}
-main,footer{max-width:760px;margin:0 auto;padding:0 22px}
-section{padding:56px 0 8px}
-.hero{padding-top:72px}
-.eyebrow{color:var(--accent);font-size:.95rem;margin:0 0 8px}
-h1{font-size:clamp(2.3rem,8vw,3.6rem);line-height:1.08;margin:.2em 0 .4em;font-weight:400}
-h1 em{font-style:italic;color:var(--accent)}
-h2{font-size:clamp(1.6rem,5vw,2.2rem);line-height:1.2;font-weight:400;margin:.2em 0 .5em}
-h3{font-size:1.4rem;margin:.1em 0;font-weight:400}
-p{margin:0 0 1em}
-.lead{color:var(--muted);font-size:1.12rem}
-.btn{display:inline-block;background:var(--ink);color:var(--bg);text-decoration:none;padding:14px 26px;border-radius:999px;font-family:system-ui,sans-serif;font-size:.95rem;letter-spacing:.04em;margin:8px 0 6px}
-.btn:hover,.btn:focus-visible{background:var(--accent);outline:none}
-.note{color:var(--muted);font-size:.92rem;font-family:system-ui,sans-serif}
-.link{color:var(--accent)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
-.card small{display:block;color:var(--muted);font-family:system-ui,sans-serif;font-size:.85rem}
-
-/* Vitrine de quizzes */
-.quizzes{display:grid;gap:16px;margin-top:22px}
-.quiz{display:flex;flex-direction:column;align-items:flex-start}
-.quiz p{color:var(--muted)}
-.quiz .btn{margin-top:auto}
-.quiz.soon{border-style:dashed;background:transparent}
-.quiz.soon h3,.quiz.soon p{color:var(--muted)}
-
-
-footer{margin-top:56px;padding-top:24px;padding-bottom:48px;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;font-family:system-ui,sans-serif}
-@media (min-width:640px){.doshas{grid-template-columns:repeat(3,1fr)}.quizzes{grid-template-columns:repeat(2,1fr)}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.6;font-size:17px}
+main,footer{width:min(1120px,100% - 40px);margin:0 auto}
+.hero{display:grid;grid-template-columns:1fr .9fr;align-items:center;gap:30px;padding:64px 0 42px}
+.brand{font-size:1.1rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:0 0 12px}
+h1{font-size:clamp(2.7rem,6vw,5rem);line-height:1.02;font-weight:400;margin:0 0 18px;letter-spacing:-.04em}
+h1 em{color:#8d6a36}
+.lead{font-size:1.18rem;color:var(--muted);max-width:620px}
+.hero-art{width:100%;max-height:320px;object-fit:cover;border-radius:48% 48% 12px 12px;filter:saturate(.8)}
+.hero-link{display:inline-block;color:var(--green);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:4px;margin-top:8px}
+.section-heading{display:flex;align-items:center;gap:18px;margin:18px 0 24px}
+.section-heading:before,.section-heading:after{content:"";height:1px;background:var(--gold);flex:1}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:400;text-align:center;margin:0;white-space:nowrap}
+.quizzes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.quiz{display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:15px;overflow:hidden;box-shadow:0 5px 18px #5d48200d;transition:transform .2s,box-shadow .2s}
+.quiz:hover{transform:translateY(-3px);box-shadow:0 10px 24px #5d482018}
+.quiz-art{display:block;width:100%;aspect-ratio:2.25/1;object-fit:cover;background:#e9dcc0}
+.quiz-body{padding:18px 20px 20px;display:flex;flex:1;flex-direction:column;align-items:flex-start}
+.kicker{font:600 .72rem/1.4 system-ui,sans-serif;letter-spacing:.09em;text-transform:uppercase;color:#8c7144;margin:0 0 7px}
+h3{font-size:1.42rem;line-height:1.2;font-weight:400;margin:0 0 10px}
+.quiz p{color:var(--muted);font-size:.98rem;margin:0 0 18px}
+.btn{display:inline-block;margin-top:auto;background:var(--green);color:#fff4dc;text-decoration:none;border-radius:999px;padding:10px 20px;font:600 .88rem system-ui,sans-serif;transition:background .2s}
+.btn:hover,.btn:focus-visible{background:#8c6735;outline:2px solid var(--gold);outline-offset:3px}
+.about-note{margin:48px 0 0;padding:30px 34px;background:var(--green);color:#f8edcf;border:1px solid var(--gold);border-radius:18px;text-align:center}
+.about-note h2{white-space:normal;color:#e5c783;margin-bottom:12px}
+.about-note p{max-width:800px;margin:0 auto 12px;font-size:1.12rem;font-style:italic}
+.about-note .note{font: .86rem/1.6 system-ui,sans-serif;color:#d9d0b8;font-style:normal}
+footer{margin-top:38px;padding:22px 0 38px;border-top:1px solid var(--line);color:var(--muted);font: .82rem system-ui,sans-serif;text-align:center}
+@media(max-width:800px){.quizzes{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{grid-template-columns:1fr .8fr;gap:18px}}
+@media(max-width:580px){main,footer{width:min(100% - 28px,460px)}.hero{grid-template-columns:1fr;padding:42px 0 28px;gap:18px}.hero-art{max-height:190px;object-position:center 45%}.quizzes{grid-template-columns:1fr;gap:16px}.quiz-art{aspect-ratio:2.5/1}.quiz-body{padding:16px 18px 18px}.section-heading{gap:10px}h2{font-size:1.65rem}.about-note{padding:24px 20px;margin-top:34px}}
 </style>
 </head>
 <body>
 <main>
-  <section class="hero">
-    <p class="eyebrow">❋ Quizuai</p>
-    <h1>Conheça melhor <em>a si mesmo.</em></h1>
-    <p class="lead">Questionários para explorar sua personalidade, suas ideias, seus padrões e sua maneira de estar no mundo.</p>
-    <p><a class="link" href="#quizzes">Explore os questionários ↓</a></p>
-  </section>
+  <header class="hero">
+    <div>
+      <p class="brand">❋ Quizuai</p>
+      <h1>Conheça melhor <em>a si mesmo.</em></h1>
+      <p class="lead">Questionários para explorar sua personalidade, suas ideias, seus padrões e sua maneira de estar no mundo.</p>
+      <a class="hero-link" href="#quizzes">Explore os questionários ↓</a>
+    </div>
+    <img class="hero-art" src="assets/junguiana.svg" alt="Ilustração simbólica de uma jornada de autoconhecimento">
+  </header>
 
   <section id="quizzes">
-    <h2>Nossos questionários</h2>
+    <div class="section-heading"><h2>Nossos questionários</h2></div>
     <div class="quizzes">
-
-      <!-- ===== INÍCIO DO CARTÃO DE QUIZ (copie este bloco para cada novo quiz) ===== -->
-      <div class="card quiz">
-        <small>AYURVEDA · QUESTIONÁRIO EM INGLÊS</small>
-        <h3>Seu Dosha Ayurvédico</h3>
-        <p>Descubra suas tendências físicas e mentais segundo os três princípios da tradição ayurvédica: Vata, Pitta e Kapha.</p>
-        <a class="btn" href="https://tally.so/r/PRdBX0">Take the quiz</a>
-      </div>
-      <!-- ===== FIM DO CARTÃO DE QUIZ ===== -->
-
-      <div class="card quiz">
-        <small>Português · 30 perguntas · ~7 min</small>
-        <h3>Matriz de Orientação Ideológica</h3>
-        <p>Investigue as dimensões do seu pensamento político e reconheça suas afinidades ideológicas.</p>
-        <a class="btn" href="https://tally.so/r/bZqd1o">Fazer o questionário</a>
-      </div>
-
-      <div class="card quiz">
-        <small>Português · 9 perguntas · ~5 min · Grátis</small>
-        <h3>Qual é o seu temperamento predominante?</h3>
-        <p>Conheça suas tendências predominantes a partir dos quatro temperamentos clássicos: sanguíneo, colérico, melancólico e fleumático.</p>
-        <a class="btn" href="https://tally.so/r/zEjP68">Fazer o questionário</a>
-      </div>
-
-      <div class="card quiz">
-        <small>Português · 20 perguntas · ~8 min · Grátis</small>
-        <h3>Onde você se posiciona?</h3>
-        <p>Explore suas posições sobre economia, Estado, sociedade e instituições e descubra onde suas ideias se situam no espectro político.</p>
-        <a class="btn" href="https://tally.so/r/xVjj8k">Fazer o questionário</a>
-      </div>
-
-      <div class="card quiz">
-        <small>Português · 31 perguntas · ~10 min · Grátis</small>
-        <h3>Qual arquétipo guia a sua história?</h3>
-        <p>Identifique as motivações simbólicas que influenciam sua personalidade, suas escolhas e a maneira como você conta a própria história.</p>
-        <a class="btn" href="https://tally.so/r/zE7bVa">Fazer o questionário</a>
-      </div>
-
-      <div class="card quiz">
-        <small>Português · Questionário junguiano</small>
-        <h3>Jornada Junguiana — Seis Etapas de Autoconhecimento</h3>
-        <p>Uma investigação inspirada na psicologia analítica, passando por conceitos como persona, sombra e individuação.</p>
-        <a class="btn" href="https://tally.so/r/X50lLj">Fazer o questionário</a>
-      </div>
-
+      <article class="quiz">
+        <img class="quiz-art" src="assets/dosha.svg" alt="Ilustração dos três princípios ayurvédicos">
+        <div class="quiz-body">
+          <p class="kicker">Ayurveda · Vata, Pitta e Kapha</p>
+          <h3>Seu Dosha Ayurvédico</h3>
+          <p>Descubra suas tendências físicas e mentais segundo os três princípios da tradição ayurvédica.</p>
+          <a class="btn" href="https://tally.so/r/PRdBX0">Fazer o teste</a>
+        </div>
+      </article>
+      <article class="quiz">
+        <img class="quiz-art" src="assets/ideologia.svg" alt="Balança clássica simbolizando ideias e equilíbrio">
+        <div class="quiz-body">
+          <p class="kicker">Ideias · Sociedade · Política</p>
+          <h3>Matriz de Orientação Ideológica</h3>
+          <p>Investigue as dimensões do seu pensamento político e reconheça suas afinidades ideológicas.</p>
+          <a class="btn" href="https://tally.so/r/bZqd1o">Fazer o questionário</a>
+        </div>
+      </article>
+      <article class="quiz">
+        <img class="quiz-art" src="assets/temperamento.svg" alt="Quatro figuras clássicas representando temperamentos">
+        <div class="quiz-body">
+          <p class="kicker">Personalidade · Quatro temperamentos</p>
+          <h3>Seu Temperamento</h3>
+          <p>Conheça suas tendências predominantes a partir dos quatro temperamentos clássicos.</p>
+          <a class="btn" href="https://tally.so/r/zEjP68">Fazer o questionário</a>
+        </div>
+      </article>
+      <article class="quiz">
+        <img class="quiz-art" src="assets/posicionamento.svg" alt="Bússola dividida em quatro campos">
+        <div class="quiz-body">
+          <p class="kicker">Economia · Estado · Sociedade</p>
+          <h3>Onde você se posiciona?</h3>
+          <p>Explore suas posições sobre economia, Estado, sociedade e instituições e descubra onde suas ideias se situam no espectro político.</p>
+          <a class="btn" href="https://tally.so/r/xVjj8k">Fazer o questionário</a>
+        </div>
+      </article>
+      <article class="quiz">
+        <img class="quiz-art" src="assets/arquetipo.svg" alt="Mandala dourada com uma figura humana ao centro">
+        <div class="quiz-body">
+          <p class="kicker">Símbolos · Motivações · Identidade</p>
+          <h3>Seu Arquétipo</h3>
+          <p>Identifique as motivações simbólicas que influenciam sua personalidade, suas escolhas e sua história.</p>
+          <a class="btn" href="https://tally.so/r/zE7bVa">Fazer o questionário</a>
+        </div>
+      </article>
+      <article class="quiz">
+        <img class="quiz-art" src="assets/junguiana.svg" alt="Figura atravessando círculos concêntricos rumo à luz">
+        <div class="quiz-body">
+          <p class="kicker">Psicologia analítica · Seis etapas</p>
+          <h3>Jornada Junguiana</h3>
+          <p>Uma investigação inspirada na psicologia analítica, passando por conceitos como persona, sombra e individuação.</p>
+          <a class="btn" href="https://tally.so/r/X50lLj">Fazer o questionário</a>
+        </div>
+      </article>
     </div>
   </section>
 
   <section class="about-note">
     <h2>Um convite à descoberta</h2>
-    <p class="lead">Autoconhecimento não é encontrar uma definição definitiva para si. É descobrir novas maneiras de compreender quem você é.</p>
+    <p>Autoconhecimento não é encontrar uma definição definitiva para si. É descobrir novas maneiras de compreender quem você é.</p>
     <p class="note">Os questionários do Quizuai são instrumentos de reflexão e exploração pessoal. Seus resultados não substituem avaliações profissionais nem devem ser tratados como diagnósticos.</p>
   </section>
 </main>
